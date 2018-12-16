@@ -3,6 +3,7 @@ require("game_state/Splash")
 require("game_state/Main")
 require("game_state/Game")
 require("game_state/Levels")
+require("game_state/Story")
 
 local game_state
 
@@ -32,6 +33,10 @@ function love.update(dt)
             state = Main:new()
             game_state:changeState(state, MAIN_MENU)
         elseif game_state.current_state == LEVEL_MENU then
+            game_state.loading = true 
+            state = Story:new(r)
+            game_state:changeState(state, STORY_STATE)
+        elseif game_state.current_state == STORY_STATE then
             game_state.loading = true 
             state = Game:new(r)
             game_state:changeState(state, GAME_STATE)

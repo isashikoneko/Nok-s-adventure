@@ -11,6 +11,7 @@ GameState = {
 GameState.__index = GameState
 
 SPLASH_SCREEN = 0
+STORY_STATE = 1
 MAIN_MENU = 2
 LEVEL_MENU = 3
 GAME_STATE = 4

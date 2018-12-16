@@ -65,7 +65,7 @@ function Game:update(dt)
 
     local name = self.fightSystem:update()
 
-    if name == self.player.character.name then 
+    --[[ if name == self.player.character.name then 
         self.player:die(self.world, self.fightSystem)
         print("Game Over")
         return false
@@ -79,7 +79,7 @@ function Game:update(dt)
             end
         end
 
-    end
+    end ]]
     
     self.world:update(dt)
     

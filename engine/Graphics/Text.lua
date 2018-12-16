@@ -38,6 +38,14 @@ function Text:resize(size)
     self.text:setFont(self.font)
 end
 
+function Text:setText(text)
+    self.text:set(text)
+end
+
+function Text:getLength()
+    return self.text:getWidth()
+end
+
 function Text:draw(x, y)
 
     love.graphics.draw(self.text, x, y)
